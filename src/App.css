@@ -1,0 +1,97 @@
+/* button 1 */
+.animationBtn1::before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    #ff9900 0%,
+    #ff9900 20%,
+    rgba(255, 255, 255) 45%
+  );
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  animation: spin 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* button 2 */
+.animationBtn2::before {
+  content: "";
+  background-image: conic-gradient(
+    #ff9900 0deg,
+
+    transparent 120deg
+  );
+  height: 300%;
+  width: 150%;
+  position: absolute;
+  border-radius: inherit;
+  top: -90%;
+  left: -25%;
+  animation: spin2 3s linear infinite;
+  z-index: -1;
+}
+@keyframes spin2 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* button 3 */
+.animate-gradient {
+  background: linear-gradient(
+    to left,
+    #f9af2f 20%,
+    #2050a0 30%,
+    #2050a0 70%,
+    #ff722c 80%
+  );
+  background-size: 300% auto;
+  animation: gradient-shift 5s linear infinite;
+}
+
+@keyframes gradient-shift {
+  to {
+    background-position: 300%;
+  }
+}
+
+/* button 4 */
+.animationBtn4::before {
+  content: "";
+  background-image: conic-gradient(#ff00c3 0deg, transparent 120deg);
+  height: 300%;
+  width: 150%;
+  position: absolute;
+  border-radius: inherit;
+  top: -90%;
+  left: -25%;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction */
+}
+
+.animationBtn4:hover::before {
+  animation: spin4 1s linear 1 forwards;
+  opacity: 1;
+}
+@keyframes spin4 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0; /* Hide after spin */
+  }
+}
