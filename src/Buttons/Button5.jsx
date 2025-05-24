@@ -34,7 +34,7 @@ const Button5 = () => {
       onMouseEnter={() => {
         handleMouseEnter();
       }}
-      className="mt-10 relative p-1 animationBtn4 rounded-full w-fit overflow-hidden hover:scale-[105%] transition-all duration-200 ease-in-out group"
+      className="mt-10 relative p-1 animationBtn5 rounded-full w-fit overflow-hidden hover:scale-[105%] transition-all duration-200 ease-in-out group"
     >
       <button className=" text-white text-lg px-6 py-4 rounded-full cursor-pointer bg-gray-500 hover:bg-blue-950 transition-all duration-200 ease-in-out ">
         <span className="flex items-center gap-2">

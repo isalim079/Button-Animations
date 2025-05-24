@@ -1,5 +1,6 @@
 
 import Button5 from "./Button5";
+import Button6 from "./Button6";
 
 const Button1 = () => {
 
@@ -36,6 +37,9 @@ const Button1 = () => {
 
       {/* button 5 */}
      <Button5 />
+
+     {/* Button 6 */}
+     <Button6 />
     </div>
   );
 };

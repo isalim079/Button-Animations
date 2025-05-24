@@ -1,0 +1,62 @@
+.button6 {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+}
+
+.button6Container {
+  --offset: 3px;
+  background: #162456;
+  height: 55px;
+  width: 150px;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.button6Container::before {
+  content: "";
+  width: 100%;
+  aspect-ratio: 1;
+  background: conic-gradient(transparent 270deg, #df3fb9, transparent);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-75%, -50%); */
+  transform: translate(-50%, -50%);
+  animation: rotate 2s linear infinite;
+}
+.button6Container::after {
+  content: "";
+  background: inherit;
+  border-radius: inherit;
+  position: absolute;
+  inset: var(--offset);
+  height: calc(100% - 2 * var(--offset));
+  width: calc(100% - 2 * var(--offset));
+}
+
+/* @keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) scale(1.4) rotate(0turn)
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1.4) rotate(1turn)
+    }
+} */
+
+@keyframes rotate {
+  0% {
+    transform: translate(-85%, -50%) scale(1.4) rotate(0turn);
+  }
+
+  50% {
+    transform: translate(-15%, -50%) scale(1.4) rotate(0.25turn);
+  }
+
+  100% {
+    transform: translate(-85%, -50%) scale(1.4) rotate(1turn);
+  }
+}
